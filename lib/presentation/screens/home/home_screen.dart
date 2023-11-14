@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
-import 'package:widgets_app/config/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -51,7 +50,7 @@ class _CustomList extends StatelessWidget {
           title: Text(menuItem.title),
           subtitle: Text(menuItem.subTitle),
           onTap: () {
-            //TODO navigate to another screen
+
           },
 
     );
