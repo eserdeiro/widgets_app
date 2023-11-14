@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -45,14 +46,13 @@ class _CustomList extends StatelessWidget {
    final colors = Theme.of(context).colorScheme;
 
     return ListTile(
-          leading: Icon(menuItem.icon, color: colors.primary),
-          trailing: const Icon(Icons.arrow_forward),
           title: Text(menuItem.title),
           subtitle: Text(menuItem.subTitle),
+          leading: Icon(menuItem.icon, color: colors.primary),
+          trailing: const Icon(Icons.arrow_forward),
           onTap: () {
-
+          context.push(menuItem.url);
           },
-
     );
   }
 }
