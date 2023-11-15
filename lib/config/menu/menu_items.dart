@@ -35,5 +35,11 @@ MenuItem(
   title   : 'Snackbars , dialogs & licences', 
   subTitle: 'Snackbars, dialogs & licences on flutter', 
   url     : '/snackbars', 
-  icon    : Icons.info_outline)
+  icon    : Icons.info_outline),
+
+  MenuItem(
+  title   : 'Animated container', 
+  subTitle: 'Animated container on flutter', 
+  url     : '/animated', 
+  icon    : Icons.check_box_outline_blank_outlined)
 ];
