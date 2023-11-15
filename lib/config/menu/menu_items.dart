@@ -32,8 +32,8 @@ MenuItem(
   icon    : Icons.refresh_rounded),
 
   MenuItem(
-  title   : 'Snackbars ', 
-  subTitle: 'Snackbars on flutter', 
+  title   : 'Snackbars , dialogs & licences', 
+  subTitle: 'Snackbars, dialogs & licences on flutter', 
   url     : '/snackbars', 
   icon    : Icons.info_outline)
 ];
