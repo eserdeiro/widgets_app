@@ -24,9 +24,16 @@ MenuItem(
   subTitle: 'Cards on flutter', 
   url     : '/cards', 
   icon    : Icons.credit_card),
-    MenuItem(
+
+  MenuItem(
   title   : 'ProgressIndicators', 
   subTitle: 'Progress indicators on flutter', 
   url     : '/progress', 
-  icon    : Icons.refresh_rounded)
+  icon    : Icons.refresh_rounded),
+
+  MenuItem(
+  title   : 'Snackbars ', 
+  subTitle: 'Snackbars on flutter', 
+  url     : '/snackbars', 
+  icon    : Icons.info_outline)
 ];
