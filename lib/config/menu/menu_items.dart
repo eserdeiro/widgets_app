@@ -47,5 +47,11 @@ MenuItem(
   title   : 'UI controls + Tiles', 
   subTitle: 'UI controls on flutter', 
   url     : '/ui-controls', 
-  icon    : Icons.car_rental_outlined)
+  icon    : Icons.car_rental_outlined),
+
+  MenuItem(
+  title   : 'Tutorial ', 
+  subTitle: 'UI controls on flutter', 
+  url     : '/tutorial', 
+  icon    : Icons.add_to_home_screen_sharp)
 ];
