@@ -16,18 +16,18 @@ class MenuItem {
 const appMenuItems = <MenuItem> [
 MenuItem(
   title   : 'Buttons', 
-  subTitle: 'Buttons on flutter', 
+  subTitle: 'Various buttons on flutter', 
   url     : '/buttons', 
   icon    : Icons.smart_button_outlined),
   MenuItem(
   title   : 'Cards', 
-  subTitle: 'Cards on flutter', 
+  subTitle: 'A stylized container', 
   url     : '/cards', 
   icon    : Icons.credit_card),
 
   MenuItem(
-  title   : 'ProgressIndicators', 
-  subTitle: 'Progress indicators on flutter', 
+  title   : 'Progress indicators', 
+  subTitle: 'General & controlled', 
   url     : '/progress', 
   icon    : Icons.refresh_rounded),
 
@@ -39,7 +39,7 @@ MenuItem(
 
   MenuItem(
   title   : 'Animated container', 
-  subTitle: 'Animated container on flutter', 
+  subTitle: 'Animated stateful widget', 
   url     : '/animated', 
   icon    : Icons.check_box_outline_blank_outlined),
 
@@ -51,7 +51,13 @@ MenuItem(
 
   MenuItem(
   title   : 'Tutorial ', 
-  subTitle: 'UI controls on flutter', 
+  subTitle: 'Small introductory tutorial', 
   url     : '/tutorial', 
-  icon    : Icons.add_to_home_screen_sharp)
+  icon    : Icons.add_to_home_screen_sharp),
+
+  MenuItem(
+  title   : 'Infinite scroll ', 
+  subTitle: 'Fullscreen Infinit list & pull to refresh ', 
+  url     : '/infinite', 
+  icon    : Icons.list_alt_outlined)
 ];
