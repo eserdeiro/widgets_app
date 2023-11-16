@@ -41,5 +41,11 @@ MenuItem(
   title   : 'Animated container', 
   subTitle: 'Animated container on flutter', 
   url     : '/animated', 
-  icon    : Icons.check_box_outline_blank_outlined)
+  icon    : Icons.check_box_outline_blank_outlined),
+
+  MenuItem(
+  title   : 'UI controls + Tiles', 
+  subTitle: 'UI controls on flutter', 
+  url     : '/ui-controls', 
+  icon    : Icons.car_rental_outlined)
 ];
