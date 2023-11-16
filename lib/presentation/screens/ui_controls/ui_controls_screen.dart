@@ -43,12 +43,13 @@ class _UiControlsView extends StatefulWidget {
   }
 }
 
-
-
 class _UiControlsViewState extends State<_UiControlsView> {
 
-    bool isDeveloper = false;
+    bool isSelected = false;
     Transportation selectedTransportation = Transportation.car;
+    bool isSelectedCheckboxOne = false;
+    bool isSelectedCheckboxTwo = false;
+    bool isSelectedCheckboxThree = false;
 
   @override
   Widget build(BuildContext context) {
@@ -59,46 +60,85 @@ class _UiControlsViewState extends State<_UiControlsView> {
         SwitchListTile(
           title: const Text('Switch List Tile'),
           subtitle: const Text('Fugiat veniam duis mollit consequat labore eu dolore.'),
-          value: isDeveloper, 
+          value: isSelected, 
           onChanged: (value) => setState(() {
-            isDeveloper = !isDeveloper;
+            isSelected = !isSelected;
           })),
 
-        RadioListTile(
-          title: const Text('By car'),
-          subtitle: const Text('Lorem officia dolore cillum elit ad laboris exercitation tempor.'),
-          value: Transportation.car, 
-          groupValue: selectedTransportation, 
+        Text('${getSelectedText(selectedTransportation)} Selected', textAlign: TextAlign.center),
+
+        const SizedBox(height: 10),
+
+        ExpansionTile(
+          //initiallyExpanded: true,
+          title: const Text('Transportation'),
+          subtitle: Text(getSelectedText(selectedTransportation)),
+          children: [
+            RadioListTile(
+            title: const Text('By car'),
+            subtitle: const Text('Lorem officia dolore cillum elit ad laboris exercitation tempor.'),
+            value: Transportation.car, 
+            groupValue: selectedTransportation, 
+            onChanged: (value) {
+            setState(() {
+              selectedTransportation = Transportation.car;
+            });
+          }),
+
+          RadioListTile(
+            title: const Text('By plane'),
+            subtitle: const Text('Consectetur ut labore voluptate nulla tempor ullamco do.'),
+            value: Transportation.plane, 
+            groupValue: selectedTransportation, 
+            onChanged: (value) {
+            setState(() {
+              selectedTransportation = Transportation.plane;
+            });
+          }),
+
+          RadioListTile(
+            title: const Text('By boat'),
+            subtitle: const Text('Sit in consectetur amet cupidatat cillum sit officia cupidatat cillum.'),
+            value: Transportation.boat, 
+            groupValue: selectedTransportation, 
+            onChanged: (value) {
+            setState(() {
+              selectedTransportation = Transportation.boat;
+            });
+          }),
+          ],
+        ),
+
+        CheckboxListTile(
+          title: const Text('Amet fugiat ea laborum aute'),
+          subtitle: const Text('Pariatur adipisi'),
+          value: isSelectedCheckboxOne, 
           onChanged: (value) {
           setState(() {
-            selectedTransportation = Transportation.car;
+            isSelectedCheckboxOne = !isSelectedCheckboxOne;
           });
         }),
 
-        RadioListTile(
-          title: const Text('By plane'),
-          subtitle: const Text('Consectetur ut labore voluptate nulla tempor ullamco do.'),
-          value: Transportation.plane, 
-          groupValue: selectedTransportation, 
+        CheckboxListTile(
+          title: const Text('Laborum mollit aute'),
+          subtitle: const Text('Lorem ullamco'),
+          value: isSelectedCheckboxTwo, 
           onChanged: (value) {
           setState(() {
-            selectedTransportation = Transportation.plane;
+            isSelectedCheckboxTwo = !isSelectedCheckboxTwo;
           });
         }),
 
-        RadioListTile(
-          title: const Text('By boat'),
-          subtitle: const Text('Sit in consectetur amet cupidatat cillum sit officia cupidatat cillum.'),
-          value: Transportation.boat, 
-          groupValue: selectedTransportation, 
+        CheckboxListTile(
+          title: const Text('Magna deserunt non laboris'),
+          subtitle: const Text('Eu Lorem anim'),
+          value: isSelectedCheckboxThree, 
           onChanged: (value) {
           setState(() {
-            selectedTransportation = Transportation.boat;
+            isSelectedCheckboxThree = !isSelectedCheckboxThree;
           });
         }),
 
-        
-        Text('${getSelectedText(selectedTransportation)} Selected', textAlign: TextAlign.center,)
       ],
     );
   }
