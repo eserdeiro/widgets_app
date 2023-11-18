@@ -59,5 +59,17 @@ MenuItem(
   title   : 'Infinite scroll ', 
   subTitle: 'Fullscreen Infinit list & pull to refresh ', 
   url     : '/infinite', 
-  icon    : Icons.list_alt_outlined)
+  icon    : Icons.list_alt_outlined),
+
+  MenuItem(
+  title   : 'Counter Riverpod', 
+  subTitle: 'Do in tempor velit', 
+  url     : '/counter', 
+  icon    : Icons.add_outlined),
+
+   MenuItem(
+  title   : 'Theme changer', 
+  subTitle: 'Change theme to light/dark and colors', 
+  url     : '/theme-changer', 
+  icon    : Icons.change_circle_outlined),
 ];
