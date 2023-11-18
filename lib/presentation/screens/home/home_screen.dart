@@ -11,7 +11,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final scaffoldKey = GlobalKey<ScaffoldState>(); 
+
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
@@ -19,7 +23,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: _HomeView(),
-      drawer: const SideMenu()
+      drawer: SideMenu(scaffoldKey: scaffoldKey)
     );
   }
 }
