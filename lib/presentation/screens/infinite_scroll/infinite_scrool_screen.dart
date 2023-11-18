@@ -37,13 +37,15 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
     });
   }
 
+
+
   @override
   void initState() {
     super.initState();
-
     scrollController.addListener(() {
-      if((scrollController.position.pixels + 500) >= scrollController.position.maxScrollExtent){
-          loadNextPage();
+      if ((scrollController.position.pixels + 500) >=
+          scrollController.position.maxScrollExtent) {
+        loadNextPage();
       }
     });
   }
@@ -65,6 +67,31 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
       isLoading = false;
       if(!isMounted) return;
       setState(() {  });
+
+      moveScrollToBottom();
+  }
+
+  Future<void> onRefresh() async {
+
+    isLoading = true;
+    setState(() {});
+
+    await Future.delayed(const Duration(seconds: 2));
+    if (!isMounted) return;
+    isLoading = false;
+    final lastId = imagesIds.last;
+    imagesIds.clear();
+    imagesIds.add(lastId + 1);
+    addFiveImages();
+    setState(() {});
+  }
+
+  void moveScrollToBottom() {
+    if (scrollController.position.pixels + 150 <=
+        scrollController.position.maxScrollExtent) return;
+    scrollController.animateTo(scrollController.position.pixels + 120,
+        duration: const Duration(milliseconds: 399),
+        curve: Curves.fastLinearToSlowEaseIn);
   }
 
   @override
@@ -79,19 +106,23 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
         context: context,
         removeBottom: true,
         removeTop: true,
-        child: ListView.builder(
-          controller: scrollController,
-          itemCount: imagesIds.length,
-          itemBuilder: (context, index) {
-          return FadeInImage(
-            
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: 300,
-            placeholder: const AssetImage('lib/assets/images/loading.gif', ), 
-            image: NetworkImage('https://picsum.photos/id/${imagesIds[index]}/500/300')
-            );
-        },),
+        child: RefreshIndicator(
+          onRefresh: onRefresh,
+          edgeOffset: 10,
+          child: ListView.builder(
+            controller: scrollController,
+            itemCount: imagesIds.length,
+            itemBuilder: (context, index) {
+            return FadeInImage(
+              
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: 300,
+              placeholder: const AssetImage('lib/assets/images/loading.gif', ), 
+              image: NetworkImage('https://picsum.photos/id/${imagesIds[index]}/500/300')
+              );
+          },),
+        ),
       ),
 
       floatingActionButton: FloatingActionButton(
