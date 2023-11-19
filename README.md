@@ -27,3 +27,33 @@ Routes
         Own
 
         From third parties
+
+RefreshIndicator
+
+InfiniteScroll
+
+ProgresIndicators
+
+    Linear
+
+    Circulars
+
+    Controlled
+
+Animations
+
+Snackbars
+
+Dialogs
+
+Licenses
+
+Switch, Checkbox, Radio
+
+Tiles
+
+Lists
+
+Pageviews
+
+And much more
