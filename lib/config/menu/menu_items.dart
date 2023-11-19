@@ -69,7 +69,7 @@ MenuItem(
 
    MenuItem(
   title   : 'Theme changer', 
-  subTitle: 'Change theme to light/dark and colors', 
+  subTitle: 'Change theme and colors with riverpod', 
   url     : '/theme-changer', 
   icon    : Icons.change_circle_outlined),
 ];
