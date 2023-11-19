@@ -1,59 +1,66 @@
 # widgets_app
 
-Navigation between screens
+    Navigation between screens
 
-    New widgets
+        New widgets
 
-    Buttons and their variants
+        Buttons and their variants
 
-        custom buttons
+            custom buttons
 
-        Cards
+            Cards
 
-        Personalized cards
+            Personalized cards
 
-        Align
+            Align
 
-Routes
+    Routes
 
-    Flutter's own
+        Flutter's own
 
-    Go_Router
+        Go_Router
 
-    Paths
+        Paths
 
-    Router configurations
+        Router configurations
 
-        Own
+            Own
 
-        From third parties
+            From third parties
 
-RefreshIndicator
+    RefreshIndicator
 
-InfiniteScroll
+    InfiniteScroll
 
-ProgresIndicators
+    ProgresIndicators
 
-    Linear
+        Linear
 
-    Circulars
+        Circulars
 
-    Controlled
+        Controlled
 
-Animations
+    Animations
 
-Snackbars
+    Snackbars
 
-Dialogs
+    Dialogs
 
-Licenses
+    Licenses
 
-Switch, Checkbox, Radio
+    Switch, Checkbox, Radio
 
-Tiles
+    Tiles
 
-Lists
+    Lists
 
-Pageviews
+    Pageviews
 
-And much more
+    And much more
+
+
+![DEMO 1](https://raw.githubusercontent.com/eserdeiro/widgets_app/main/assets/1.png)
+
+![DEMO 2](https://raw.githubusercontent.com/eserdeiro/widgets_app/main/assets/2.png)
+
+![DEMO 3](https://raw.githubusercontent.com/eserdeiro/widgets_app/main/assets/3.png)
