@@ -59,8 +59,4 @@
     And much more
 
 
-![DEMO 1](https://raw.githubusercontent.com/eserdeiro/widgets_app/main/assets/1.png)
-
-![DEMO 2](https://raw.githubusercontent.com/eserdeiro/widgets_app/main/assets/2.png)
-
-![DEMO 3](https://raw.githubusercontent.com/eserdeiro/widgets_app/main/assets/3.png)
+<img src="https://raw.githubusercontent.com/eserdeiro/widgets_app/main/assets/1.png" width="30%"><img src="https://raw.githubusercontent.com/eserdeiro/widgets_app/main/assets/2.png" width="30%"><img src="https://raw.githubusercontent.com/eserdeiro/widgets_app/main/assets/3.png" width="30%">
